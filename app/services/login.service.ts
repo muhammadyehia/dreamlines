@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import 'rxjs/Rx';
-import { IUser } from './user';
+import { IUser } from '../entities/index';
 
 @Injectable()
 export class LoginService {

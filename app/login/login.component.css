@@ -43,3 +43,16 @@
 .form button:hover,.form button:active,.form button:focus {
   background: #43A047;
 }
+
+/*.loading-img{
+    position: fixed;
+    top:0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+   
+    vertical-align: middle;
+    text-align: center;
+    padding-top:200px;
+}*/
+

@@ -4,7 +4,8 @@ import { FormsModule }   from '@angular/forms';
 import { routing } from './app.routing';
 import { HttpModule }    from '@angular/http';
 import { AppComponent }  from './app.component';
-import { LoginComponent,LoginService }  from './login/index';
+import { LoginComponent }  from './login/index';
+import {LoginService} from './services/index'
 import { WallComponent } from './wall/index';
 
 @NgModule({

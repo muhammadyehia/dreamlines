@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { IUser, LoginService } from '../login/index'
+import { IUser} from '../entities/index'
+import {LoginService} from '../services/index'
 @Component({
     moduleId: module.id,
     selector: 'app-wall',

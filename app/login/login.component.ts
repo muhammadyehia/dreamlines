@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginService } from './login.service'
-import { IUser } from './user'
+import { LoginService } from '../services/index'
+import { IUser } from '../entities/index'
 @Component({
     moduleId: module.id,
     selector: 'app-login',
@@ -12,8 +12,10 @@ export class LoginComponent implements OnInit {
     constructor(private _router: Router, private _loginService: LoginService) { }
     public UserName: string;
     public Submit: boolean;
+    public  HideLoading: boolean;
     ngOnInit() {
         this.Submit = true;
+        this.HideLoading = true;
     }
     OnPressEnter(event: any) {
         if (event.keyCode == 13) {
@@ -24,6 +26,7 @@ export class LoginComponent implements OnInit {
         }
     }
     Login() {
+        this. HideLoading = false;
         if (!this.UserName) {
             this.Submit = false;
         }
@@ -32,6 +35,7 @@ export class LoginComponent implements OnInit {
         }
         if (this.Submit) {
             this._loginService.GetUser(this.UserName).then((value: IUser) => {
+                this. HideLoading = true;
                 if (value) {
                     let link = ['/wall'];
                     this._router.navigate(link);
