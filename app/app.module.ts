@@ -7,10 +7,11 @@ import { AppComponent }  from './app.component';
 import { LoginComponent }  from './login/index';
 import {LoginService} from './services/index'
 import { WallComponent } from './wall/index';
-
+import { PostComponent } from './posts/index'
+import { commentComponent } from './comments/index'
 @NgModule({
   imports: [ BrowserModule ,HttpModule,FormsModule,routing],
-  declarations: [ AppComponent, LoginComponent,WallComponent],
+  declarations: [ AppComponent, LoginComponent,WallComponent,PostComponent,commentComponent],
   bootstrap: [ AppComponent ],
   providers:[LoginService]
 })

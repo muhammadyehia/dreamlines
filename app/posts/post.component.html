@@ -1,0 +1,16 @@
+
+<div class= "titleInfo">
+{{ post.title}}
+</div>
+<div class= "bodyInfo">
+    {{ post.body}}
+</div>
+<div class="comment-buttom" *ngIf="!CommentVisibility">
+<button type="button"  class="button" (click)="ShowComments()">Show Comments</button>
+</div>
+<div *ngIf="CommentVisibility" class="commnets" >
+<div *ngFor="let item of Comments" >
+    <app-comment [comment]='item' ></app-comment>
+    <hr>
+</div>
+</div>

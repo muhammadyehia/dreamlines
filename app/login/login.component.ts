@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
     ngOnInit() {
         this.Submit = true;
         this.HideLoading = true;
+        this.UserName="Bret";
     }
     OnPressEnter(event: any) {
         if (event.keyCode == 13) {
