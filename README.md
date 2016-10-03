@@ -34,7 +34,8 @@ Both the compiler and the server watch for file changes.
 Shut it down manually with Ctrl-C.
 
 You're ready to write your application.
-
+## Use users in below link 
+[Users](http://jsonplaceholder.typicode.com/users)
 ### npm scripts
 
 We've captured many of the most useful commands in npm scripts defined in the `package.json`:
