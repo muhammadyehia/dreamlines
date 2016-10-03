@@ -1,14 +1,19 @@
-<div class="userInfo" >
-    Welcome {{UserName}}
+<div class="userInfo">
+    Welcome {{currentUser.name}}
 </div>
 <div class="new-post">
-    <textarea  class="post-text" autofocus placeholder="What's on your mind?" ></textarea>
-</div>
-<div class="comment-buttom">
-<button type="button"  class="button" (click)="AddNewPost()">Add New Post</button>
-</div>
-<div *ngFor="let item of UserPosts">
-    <app-post [post]='item' >
-    </app-post>
+    <div class="new-post-title">
+        <input type="text" class="form-control" [(ngModel)]="NewTitle" placeholder="Title">
+    </div>
+    <div class="new-post-body">
+        <textarea class="form-control post-text" [(ngModel)]="NewBody" autofocus placeholder="What's on your mind?"></textarea>
+    </div>
+    <div class="comment-buttom">
+        <button type="button" class="button" (click)="AddNewPost()">Add New Post</button>
+    </div>
 </div>
 
+<div *ngFor="let item of UserPosts">
+    <app-post [post]='item'>
+    </app-post>
+</div>

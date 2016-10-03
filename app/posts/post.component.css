@@ -71,3 +71,20 @@
     z-index: 1;
     background: #FFFFFF;
 }
+.no-commnets{
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: large;
+    font-weight: bold;
+    padding: 10px;
+    top: 10px;
+    max-width:30%;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);   
+    z-index: 1;
+    background: #FFFFFF;
+}
