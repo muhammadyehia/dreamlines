@@ -36,7 +36,12 @@ export class WallComponent implements OnInit {
             "body": this.NewBody
         };
         this.UserPosts.unshift(newPost);
-        this.NewTitle="";
-        this.NewBody="";
+        this.NewTitle = "";
+        this.NewBody = "";
+    }
+    LogOut() {
+        this._loginService.LogOut();
+        let link = ['/login'];
+        this._router.navigate(link);
     }
 }

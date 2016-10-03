@@ -1,6 +1,7 @@
 <div class="userInfo">
     Welcome {{currentUser.name}}
 </div>
+<button type="button" class="logout-button" (click)="LogOut()">LogOut</button>
 <div class="new-post">
     <div class="new-post-title">
         <input type="text" class="form-control" [(ngModel)]="NewTitle" placeholder="Title">

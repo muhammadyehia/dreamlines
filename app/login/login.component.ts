@@ -12,11 +12,15 @@ export class LoginComponent implements OnInit {
     constructor(private _router: Router, private _loginService: LoginService) { }
     public UserName: string;
     public Submit: boolean;
-    public  HideLoading: boolean;
+    public HideLoading: boolean;
+
     ngOnInit() {
         this.Submit = true;
         this.HideLoading = true;
-        this.UserName="Bret";
+        this.UserName = this._loginService.GetCurrentLoginUserName();
+        if (this.UserName) {
+            this.Login();
+        }
     }
     OnPressEnter(event: any) {
         if (event.keyCode == 13) {
@@ -27,7 +31,7 @@ export class LoginComponent implements OnInit {
         }
     }
     Login() {
-        this. HideLoading = false;
+        this.HideLoading = false;
         if (!this.UserName) {
             this.Submit = false;
         }
@@ -36,14 +40,12 @@ export class LoginComponent implements OnInit {
         }
         if (this.Submit) {
             this._loginService.GetUser(this.UserName).then((value: IUser) => {
-                this. HideLoading = true;
-                if (value) {
+                this.HideLoading = true;
+                    this._loginService.SetCurrentLoginUserName(this.UserName);
                     let link = ['/wall'];
                     this._router.navigate(link);
-                }
-                else {
+                
 
-                }
             });
 
         }
